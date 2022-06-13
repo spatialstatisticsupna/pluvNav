@@ -11,7 +11,7 @@
 #'
 #' @examples
 downloadStationData<-function(st,years,r.folder,curl,download){
-  ##st<-stations[[3]]
+
   st.name<-st[3]
   st.url=paste0("http://meteo.navarra.es/estaciones/descargardatos_estacion.cfm?IDEstacion=",st[1])
 
