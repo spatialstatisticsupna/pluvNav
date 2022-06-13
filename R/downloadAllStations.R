@@ -1,11 +1,25 @@
-downloadAllStations<-function(pluvDownfolder,
+#' Download pluviometric data from all pluviometric stations
+#'
+#' @param pluvDownFolder path for the pluviometric data to be stored
+#' @param start_year starting year for the data download
+#' @param end_year ending year for the data download
+#' @param station.types either
+#' @param download logical argument. If \code{TRUE}, downloads data for all the
+#' available stations and dates, overwriting the ones previously saved in the path
+#' \code{pluvDownFolder}
+#'
+#' @return
+#' @export
+#'
+#' @examples
+downloadAllStations<-function(pluvDownFolder,
                               start_year,
                               end_year,
                               station.types=c("AUTO","MAN"),
                               download=T){
 
-  if(!file.exists(paste0(pluvDownfolder))){
-    dir.create(paste0(pluvDownfolder))
+  if(!file.exists(paste0(pluvDownFolder))){
+    dir.create(paste0(pluvDownFolder))
   }
 
   curl = getCurlHandle()
@@ -22,27 +36,27 @@ downloadAllStations<-function(pluvDownfolder,
   print(paste0("Start Date: ", start_year))
   print(paste0("End Date: ", end_year))
   print(paste0("Station types: ",toString(station.types)))
-  print(paste0("Data will save in '",pluvDownfolder,"' folder."))
+  print(paste0("Data will save in '",pluvDownFolder,"' folder."))
   years=start_year:end_year
   #station number name and id
-  stations<-getEstationList()
+  stations<-getStationList()
 
 
   lapply(stations,
          downloadStationData,
          years=years,
-         r.folder=pluvDownfolder,
+         r.folder=pluvDownFolder,
          curl=curl,
          download=download)
   #get station location and altitude
-  st.info.file<-paste0(pluvDownfolder,"/stations_position_altitude.csv")
+  st.info.file<-paste0(pluvDownFolder,"/stations_position_altitude.csv")
   st.info<-lapply(stations,getStationLocationAltitude)
   st.info<-as.data.frame(do.call(rbind,st.info))
-  write.csv(st.info, file = paste0(pluvDownfolder,"/stations_position_altitude.csv"),row.names = F)
+  write.csv(st.info, file = paste0(pluvDownFolder,"/stations_position_altitude.csv"),row.names = F)
 
 
 
   #unify all csv in one file
-  r<-lapply(station.types,unify.csv,years,stations,pluvDownfolder)
+  r<-lapply(station.types,unify.csv,years,stations,pluvDownFolder)
 }
 

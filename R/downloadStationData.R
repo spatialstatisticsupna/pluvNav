@@ -1,3 +1,15 @@
+#' Title
+#'
+#' @param st
+#' @param years
+#' @param r.folder
+#' @param curl
+#' @param download
+#'
+#' @return
+#' @export
+#'
+#' @examples
 downloadStationData<-function(st,years,r.folder,curl,download){
   ##st<-stations[[3]]
   st.name<-st[3]

@@ -1,6 +1,12 @@
 library(RCurl)
 library(XML)
-getEstationList<-function(){
+#' Title
+#'
+#' @return
+#' @export
+#'
+#' @examples
+getStationList<-function(){
   theurl <- "http://meteo.navarra.es/estaciones/mapadeestaciones.cfm"
   webpage <- getURL(theurl)
   # Process escape characters
