@@ -5,7 +5,6 @@
 #' @importFrom RCurl getURL
 #' @export
 #'
-#' @examples
 getStationList<-function(){
   theurl <- "http://meteo.navarra.es/estaciones/mapadeestaciones.cfm"
   webpage <- getURL(theurl)

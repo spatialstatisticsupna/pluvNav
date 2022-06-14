@@ -2,10 +2,14 @@
 % Please edit documentation in R/stations.R
 \name{getStationList}
 \alias{getStationList}
-\title{Title}
+\title{Search for available pluviometric stations}
 \usage{
 getStationList()
 }
+\value{
+a \code{list} containing information about available locations
+(id, type and name)
+}
 \description{
-Title
+Search for available pluviometric stations
 }

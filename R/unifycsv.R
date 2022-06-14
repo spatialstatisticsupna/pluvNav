@@ -1,16 +1,11 @@
-library(plyr)
-
-#' Title
+#' Unify data from all csv files corresponding to stations of the same type
 #'
-#' @param station.type
-#' @param years
-#' @param stations
-#' @param d.folder
+#' @param station.type either \code{"AUTO"} or \code{"MAN"}
+#' @param years vector of years to unify
+#' @param stations list of stations to unify
+#' @param d.folder path to the folder containing the csv files
 #'
-#' @return
-#' @export
 #'
-#' @examples
 unify.csv<-function(station.type,years,stations,d.folder){
   print(paste0("Merge all ",station.type," data in one csv."))
   st.type<-lapply(stations,FUN=function(x)if(x[2]==station.type)return(x))

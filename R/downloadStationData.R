@@ -1,15 +1,15 @@
-#' Title
+#' Download data for a single pluviometric station
 #'
-#' @param st
-#' @param years
-#' @param r.folder
-#' @param curl
-#' @param download
-#'
+#' @param st a vector containing (station.ID, station.type, station.name) in the
+#' same way as in the elements from \code{getStationList()}
+#' @param years vector of years to download
+#' @param r.folder path to the folder to store the downloaded csv files
+#' @param curl curl handle
+#' @param download logical argument. If \code{TRUE}, downloads all data, overwriting
+#' previous files in \code{r.folder}
 #' @importFrom RCurl getURL url.exists CFILE curlPerform close
 #' @export
 #'
-#' @examples
 downloadStationData<-function(st,years,r.folder,curl,download){
 
   st.name<-st[3]

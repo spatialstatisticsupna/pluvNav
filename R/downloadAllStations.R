@@ -3,7 +3,9 @@
 #' @param pluvDownFolder path for the pluviometric data to be stored
 #' @param start_year starting year for the data download
 #' @param end_year ending year for the data download
-#' @param station.types either
+#' @param station.types either \code{"MAN"} for data from manual stations,
+#' \code{"AUTO"} for data from automatic stations or \code{c("MAN","AUTO")} for
+#' data from both types of stations
 #' @param download logical argument. If \code{TRUE}, downloads data for all the
 #' available stations and dates, overwriting the ones previously saved in the path
 #' \code{pluvDownFolder}
@@ -11,7 +13,7 @@
 #' @importFrom RCurl getCurlHandle curlSetOpt
 #' @export
 #'
-#' @examples
+#' @examples TODO some example?
 downloadAllStations<-function(pluvDownFolder,
                               start_year,
                               end_year,

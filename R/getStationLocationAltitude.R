@@ -1,11 +1,10 @@
-#' Title
+#' Obtain location and altitude for a given station
 #'
-#' @param st
+#' @param st a vector containing (ID, type, station.name)
 #'
-#' @return
+#' @return a vector containing (Station.ID,Station.Name,Altitude,UTM.X.Coordinate,UTM.Y.Coordinate)
 #' @export
 #'
-#' @examples
 getStationLocationAltitude<-function(st){
   url<-paste0("http://meteo.navarra.es/estaciones/estacion_detalle.cfm?idestacion=",st[1])
   webpage<-getURL(url)
