@@ -1,11 +1,10 @@
 Package: pluvNav
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Downloading pluviometric data for the province of Navarra, Spain
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Harkaitz Goyena, Unai Pérez-Goya, Ana Férnandez-Militino
+Maintainer: Harkaitz Goyena <harkaitz.goyena@unavarra.es>
+Description: Downloading pluviometric data for the province of Navarra, Spain
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

@@ -6,7 +6,7 @@
 #' @param curl
 #' @param download
 #'
-#' @return
+#' @importFrom RCurl getURL url.exists CFILE curlPerform close
 #' @export
 #'
 #' @examples

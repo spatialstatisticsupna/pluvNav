@@ -32,11 +32,6 @@ unify.csv<-function(station.type,years,stations,d.folder){
   saveRDS(data,paste0(d.folder,"/navarra_day_by_day_",station.type,"_",years[1],"-",years[length(years)],".RDS"))
 }
 
-getStationID<-function(st.name,stations){
-  id<-lapply(stations,function(x,st.name)if(x[3]==st.name)return(x[1]),st.name)
-  return(unlist(id[!sapply(id,is.null)]))
-}
-
 readPluvCSV<-function(path,stations,...){
   st.name<-gsub("\\.*_.*$","",basename(dirname(path)))
   st.id<-getStationID(st.name,stations)
@@ -45,4 +40,9 @@ readPluvCSV<-function(path,stations,...){
   aux$Station.ID<-st.id
   aux<-aux[-which(names(aux)=="X")]
   return(aux)
+}
+
+getStationID<-function(st.name,stations){
+  id<-lapply(stations,function(x,st.name)if(x[3]==st.name)return(x[1]),st.name)
+  return(unlist(id[!sapply(id,is.null)]))
 }

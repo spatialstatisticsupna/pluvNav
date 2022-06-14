@@ -1,8 +1,8 @@
-library(RCurl)
-library(XML)
-#' Title
+#' Search for available pluviometric stations
 #'
-#' @return
+#' @return a \code{list} containing information about available locations
+#' (id, type and name)
+#' @importFrom RCurl getURL
 #' @export
 #'
 #' @examples

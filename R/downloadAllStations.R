@@ -8,7 +8,7 @@
 #' available stations and dates, overwriting the ones previously saved in the path
 #' \code{pluvDownFolder}
 #'
-#' @return
+#' @importFrom RCurl getCurlHandle curlSetOpt
 #' @export
 #'
 #' @examples
