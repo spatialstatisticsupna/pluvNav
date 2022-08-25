@@ -2,13 +2,16 @@
 % Please edit documentation in R/getStationLocationAltitude.R
 \name{getStationLocationAltitude}
 \alias{getStationLocationAltitude}
-\title{Title}
+\title{Obtain location and altitude for a given station}
 \usage{
 getStationLocationAltitude(st)
 }
 \arguments{
-\item{st}{}
+\item{st}{a vector containing (ID, type, station.name)}
+}
+\value{
+a vector containing (Station.ID,Station.Name,Altitude,UTM.X.Coordinate,UTM.Y.Coordinate)
 }
 \description{
-Title
+Obtain location and altitude for a given station
 }

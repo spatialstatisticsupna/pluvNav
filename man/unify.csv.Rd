@@ -2,13 +2,19 @@
 % Please edit documentation in R/unifycsv.R
 \name{unify.csv}
 \alias{unify.csv}
-\title{Title}
+\title{Unify data from all csv files corresponding to stations of the same type}
 \usage{
 unify.csv(station.type, years, stations, d.folder)
 }
 \arguments{
-\item{d.folder}{}
+\item{station.type}{either \code{"AUTO"} or \code{"MAN"}}
+
+\item{years}{vector of years to unify}
+
+\item{stations}{list of stations to unify}
+
+\item{d.folder}{path to the folder containing the csv files}
 }
 \description{
-Title
+Unify data from all csv files corresponding to stations of the same type
 }

@@ -19,7 +19,9 @@ downloadAllStations(
 
 \item{end_year}{ending year for the data download}
 
-\item{station.types}{either}
+\item{station.types}{either \code{"MAN"} for data from manual stations,
+\code{"AUTO"} for data from automatic stations or \code{c("MAN","AUTO")} for
+data from both types of stations}
 
 \item{download}{logical argument. If \code{TRUE}, downloads data for all the
 available stations and dates, overwriting the ones previously saved in the path
@@ -27,4 +29,7 @@ available stations and dates, overwriting the ones previously saved in the path
 }
 \description{
 Download pluviometric data from all pluviometric stations
+}
+\examples{
+TODO some example?
 }
