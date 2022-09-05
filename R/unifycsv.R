@@ -6,6 +6,7 @@
 #' @param d.folder path to the folder containing the csv files
 #'
 #' @importFrom plyr rbind.fill
+#' @importFrom utils read.csv write.csv
 #'
 unify.csv<-function(station.type,years,stations,d.folder){
   print(paste0("Merge all ",station.type," data in one csv."))

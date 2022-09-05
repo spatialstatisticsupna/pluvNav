@@ -17,12 +17,12 @@ downloadStationData<-function(st,years,r.folder,curl,download){
 
   #station data folder
   r.path<-paste0(r.folder,"/",st.name,"_",st[2])
-  r.path<-gsub('á','a',r.path)
-  r.path<-gsub('é','e',r.path)
-  r.path<-gsub('í','i',r.path)
-  r.path<-gsub('ó','o',r.path)
-  r.path<-gsub('ú','u',r.path)
-  r.path<-gsub('ñ','n',r.path)
+  r.path<-gsub('\u00e1','a',r.path)
+  r.path<-gsub('\u00e9','e',r.path)
+  r.path<-gsub('\u00ed','i',r.path)
+  r.path<-gsub('\u00f3','o',r.path)
+  r.path<-gsub('\u00fa','u',r.path)
+  r.path<-gsub('\u00f1','n',r.path)
   if(!file.exists(r.path)){
     dir.create(r.path)
   }
@@ -44,12 +44,12 @@ downloadStationData<-function(st,years,r.folder,curl,download){
 downloadCSV<-function(url,r.path,curl,download){
   url<-gsub(" ","%20",url)
   fpath<-paste0(r.path,"/",gsub("%20"," ",basename(url)))
-  fpath<-gsub('á','a',fpath)
-  fpath<-gsub('é','e',fpath)
-  fpath<-gsub('í','i',fpath)
-  fpath<-gsub('ó','o',fpath)
-  fpath<-gsub('ú','u',fpath)
-  fpath<-gsub('ñ','n',fpath)
+  fpath<-gsub('\u00e1','a',fpath)
+  fpath<-gsub('\u00e9','e',fpath)
+  fpath<-gsub('\u00ed','i',fpath)
+  fpath<-gsub('\u00f3','o',fpath)
+  fpath<-gsub('\u00fa','u',fpath)
+  fpath<-gsub('\u00f1','n',fpath)
   if(download|!file.exists(fpath)){
     if(url.exists(url)){
       print(paste0("Downloading ",gsub("%20"," ",basename(url))," file."))

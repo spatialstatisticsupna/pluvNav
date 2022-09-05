@@ -13,7 +13,7 @@
 #' @importFrom RCurl getCurlHandle curlSetOpt
 #' @export
 #'
-#' @examples TODO some example?
+#' @examples # TODO some example?
 downloadAllStations<-function(pluvDownFolder,
                               start_year,
                               end_year,
