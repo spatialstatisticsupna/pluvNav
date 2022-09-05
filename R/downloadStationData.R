@@ -60,7 +60,7 @@ downloadCSV<-function(url,r.path,curl,download){
       print(paste0("The url ",url," does not exists."))
     }
   }else{
-    print(paste0("File ",basename(url)," already exists."))
+    print(paste0("File ",gsub("%20"," ",basename(url))," already exists."))
   }
 
 
