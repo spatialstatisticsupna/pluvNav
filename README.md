@@ -4,3 +4,13 @@ The goal of `pluvNav` is to provide tools for searching and downloading pluviome
 1. Search basic information from pluviometric stations.
 2. Download pluviometric data for any number of available stations in csv format.
 3. Unify csv files for any dates and stations of the same type into a single csv file for easier managing. (Note that Automatic stations tend to have more available variables than manual stations)
+
+
+``` r
+# check and install devtools
+if(!require("devtools")){
+   install.packages("devtools")
+}
+
+devtools::install_github("spatialstatisticsupna/pluvNav")
+```
